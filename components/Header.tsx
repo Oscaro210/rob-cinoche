@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/interviews", label: "Interviews" },
@@ -9,11 +10,16 @@ const navLinks = [
 export default function Header() {
   return (
     <header className="border-b-2 border-[#c8d8ea] bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-      <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold tracking-tight" style={{ color: "#1a1a2e" }}>
-          <span style={{ color: "#4a90d9" }}>Ro</span>
-          <span style={{ color: "#f28b82" }}>B</span>
-          <span className="text-base ml-1" style={{ color: "#1a1a2e" }}>cinoche</span>
+      <div className="max-w-4xl mx-auto px-6 py-3 flex items-center justify-between">
+        <Link href="/">
+          <Image
+            src="/images/logo.png"
+            alt="ROB cinoche"
+            width={110}
+            height={55}
+            className="object-contain"
+            priority
+          />
         </Link>
 
         <nav className="flex gap-6">

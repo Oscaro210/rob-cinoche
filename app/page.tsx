@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const sections = [
   {
@@ -29,15 +30,14 @@ export default function Home() {
     <div className="flex flex-col items-center gap-16 py-12">
       {/* Hero */}
       <div className="text-center flex flex-col items-center gap-6">
-        <div
-          className="text-[5rem] leading-none font-bold tracking-tight"
-          style={{ color: "#1a1a2e" }}
-        >
-          <span style={{ color: "#4a90d9" }}>Ro</span>
-          <span style={{ color: "#f28b82" }}>B</span>
-          <br />
-          <span className="text-[2.5rem]">cinoche</span>
-        </div>
+        <Image
+          src="/images/logo.png"
+          alt="ROB cinoche"
+          width={280}
+          height={140}
+          className="object-contain"
+          priority
+        />
 
         <p
           className="text-xl max-w-sm text-center leading-relaxed"
