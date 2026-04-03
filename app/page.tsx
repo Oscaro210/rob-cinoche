@@ -7,6 +7,7 @@ const sections = [
     desc: "On rencontre les cinéastes.",
     color: "#f28b82",
     rotate: "-1deg",
+    levitate: "levitate",
   },
   {
     href: "/cine-club",
@@ -14,6 +15,7 @@ const sections = [
     desc: "Une séance, un film, une discussion.",
     color: "#4a90d9",
     rotate: "1deg",
+    levitate: "levitate-2",
   },
   {
     href: "/cannes",
@@ -21,6 +23,7 @@ const sections = [
     desc: "Notre couverture du festival.",
     color: "#ffd966",
     rotate: "-0.5deg",
+    levitate: "levitate-3",
   },
 ];
 
@@ -56,11 +59,8 @@ export default function Home() {
           <Link
             key={s.href}
             href={s.href}
-            className="block p-6 rounded-lg border-2 bg-white/70 hover:bg-white transition-colors"
-            style={{
-              borderColor: s.color,
-              transform: `rotate(${s.rotate})`,
-            }}
+            className={`block p-6 rounded-lg border-2 bg-white/70 hover:bg-white hover:shadow-lg ${s.levitate}`}
+            style={{ borderColor: s.color, rotate: s.rotate }}
           >
             <div
               className="text-2xl font-bold mb-2"
