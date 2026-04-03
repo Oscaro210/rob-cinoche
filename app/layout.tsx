@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Patrick_Hand } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 
-const patrickHand = Patrick_Hand({
-  weight: "400",
-  subsets: ["latin"],
+const bakeBunny = localFont({
+  src: "../public/fonts/BakeBunny-Round.otf",
   variable: "--font-patrick",
   display: "swap",
 });
@@ -30,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={patrickHand.variable}>
+    <html lang="fr" className={bakeBunny.variable}>
       <body>
         <Header />
         <main className="max-w-4xl mx-auto px-6 py-10">{children}</main>
