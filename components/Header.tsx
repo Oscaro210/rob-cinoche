@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const navLinks = [
   { href: "/interviews", label: "Interviews" },
+  { href: "/critiques", label: "Critiques" },
   { href: "/cine-club", label: "Ciné Club" },
   { href: "/cannes", label: "Cannes" },
 ];
