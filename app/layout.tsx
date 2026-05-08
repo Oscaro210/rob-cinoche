@@ -20,6 +20,20 @@ export const metadata: Metadata = {
     siteName: "ROB cinoche",
     locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 3375,
+        height: 3375,
+        alt: "ROB cinoche",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ROB cinoche",
+    description: "Le média cinéma de R & O — critiques, interviews, ciné club.",
+    images: ["/images/logo.png"],
   },
 };
 
